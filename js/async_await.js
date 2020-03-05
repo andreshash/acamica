@@ -1,3 +1,9 @@
+/**
+ *  Ejemplos  usando   asyn awit  ,  promises
+ *  con la api de github
+ *  https://developer.github.com/v3/
+ */
+
 // funcion tradicional  -- con error
 
  function getUserFromGithuhV1(username) {
