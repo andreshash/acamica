@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM EJEMPLO</title>
+</head>
+<body>
+    <p id="p1"> parrafó 1</p>
+    <p id="p2"> parrafó 2</p>
+    <p id="p3"> parrafó 3</p>
+    <p id="p4"> parrafó 4</p>
+    <p id="p5"> parrafó 5</p>
+
+    <p class="azul">  parrafo 6</p>
+    <p class="azul">  parrafo 7</p>
+    <p class="verde">  parrafo 8</p>
+    <p class="azul">  parrafo 9</p>
+
+    <div> FIN</div>
+    <script>
+        //por nombre
+        function prueba1() {
+            let parrafos = document.getElementsByName("p");
+            console.log(parrafos.length);
+        }
+
+        // por id
+        function prueba2(){
+            let parrafos = document.getElementById("p2");
+            console.log(parrafos);
+        }
+
+
+        // por clase
+        function prueba3() {
+            let parrafos  =  document.getElementsByClassName("azul");
+            console.log(parrafos);
+        }
+
+        // por query y listar las propiedades
+        function prueba4() {
+            let parrafos  =  document.querySelectorAll(".azul");
+            console.log(parrafos);
+            console.log(parrafos.classList);
+        }
+
+        prueba5  = () => {
+            let parrafo  =  document.querySelector("#p5");
+            parrafo.innerHTML = "cambiando a texto de prueba";
+        };
+
+        prueba6  = () => {
+            // <div> </div>
+           let parent  = document.createElement("div");
+           console.log(parent.outerHTML);
+
+           let child  = document.createElement("p");
+           parent.appendChild(child);
+           console.log(parent.outerHTML);
+
+           child.after(document.createElement("article"));
+           console.log(parent.outerHTML);
+
+            child.before(document.createElement("section"));
+            console.log(parent.outerHTML);
+
+        };
+
+
+
+
+        prueba1();
+
+    </script>
+
+</body>
+</html>
