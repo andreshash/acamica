@@ -16,6 +16,9 @@
     <p class="verde">  parrafo 8</p>
     <p class="azul">  parrafo 9</p>
 
+    <div id="test">
+    </div>
+
     <div> FIN</div>
     <script>
         //por nombre
@@ -49,12 +52,14 @@
             parrafo.innerHTML = "cambiando a texto de prueba";
         };
 
+        // creación de elementos html de manera programatica
         prueba6  = () => {
             // <div> </div>
            let parent  = document.createElement("div");
            console.log(parent.outerHTML);
 
            let child  = document.createElement("p");
+           child.innerHTML = " hijo div";
            parent.appendChild(child);
            console.log(parent.outerHTML);
 
@@ -64,12 +69,15 @@
             child.before(document.createElement("section"));
             console.log(parent.outerHTML);
 
+            // agregamos al div test
+            let div  =  document.querySelector("#test");
+            div.append(parent);
         };
 
 
 
 
-        prueba1();
+        prueba6();
 
     </script>
 
