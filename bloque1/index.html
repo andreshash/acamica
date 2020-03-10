@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+          body {
+              font-family: Arial, Helvetica , sans-serif;
+              color: white;;
+              background-color: blue;
+          }
+    </style>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+    <p> Mi primer  proyecto acamica --   prueba</p>
+
+    <script>
+        let parrafo = document.querySelector('p');
+        parrafo.style.cursor = "pointer";
+
+        parrafo.addEventListener('mouseenter', function () {
+            parrafo.style.color = "orange"
+        });
+        parrafo.addEventListener('mouseleave', function () {
+            parrafo.style.color = "white"
+        });
+        parrafo.addEventListener('click', function () {
+             alert("Felicitaciones ! , logrates tu primera web")
+        });
+
+    </script>
+</body>
+
+</html>
