@@ -5,11 +5,11 @@
     <title>DOM EJEMPLO</title>
 </head>
 <body>
-    <p id="p1"> parrafó 1</p>
+    <p id="p1" class="azul"> parrafó 1</p>
     <p id="p2"> parrafó 2</p>
     <p id="p3"> parrafó 3</p>
     <p id="p4"> parrafó 4</p>
-    <p id="p5"> parrafó 5</p>
+    <p id="p5"> parrafo 5</p>
 
     <p class="azul">  parrafo 6</p>
     <p class="azul">  parrafo 7</p>
@@ -23,7 +23,8 @@
     <script>
         //por nombre
         function prueba1() {
-            let parrafos = document.getElementsByName("p");
+            let parrafos = document.getElementsByTagName("p");
+            console.log(parrafos);
             console.log(parrafos.length);
         }
 
@@ -42,7 +43,7 @@
 
         // por query y listar las propiedades
         function prueba4() {
-            let parrafos  =  document.querySelectorAll(".azul");
+            let parrafos  =  document.querySelectorAll("#p1", ".azul");
             console.log(parrafos);
             console.log(parrafos.classList);
         }
@@ -77,7 +78,7 @@
 
 
 
-        prueba6();
+        prueba2();
 
     </script>
 
