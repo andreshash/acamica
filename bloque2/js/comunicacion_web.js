@@ -29,6 +29,9 @@ function postData(event){
         .catch((err)=>console.log(err))
 }
 
+/**
+ *   traer usuarios
+ */
 function getAPI() {
     fetch('https://jsonplaceholder.typicode.com/users')
         .then((res) => { return res.json() })
